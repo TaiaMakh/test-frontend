@@ -15,12 +15,13 @@ export default function List() {
       .then((data) => {
         setData(data.results);
         setLoading(false);
-      });
+      })
+      .catch((error) => console.log(error));
   }, []);
 
   return (
     <SCList>
-      <div className='gral-div'>
+      <div className="gral-div">
         <div className="inputs-div">
           <Text size="m"> Name: </Text>
           <Search setSearch={setSearchName} search={searchName} />
@@ -68,13 +69,13 @@ export default function List() {
 
 const SCList = styled.div`
   .gral-div {
-  padding: 35px;
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    padding: 35px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  
+
   .inputs-div {
     display: flex;
     align-items: center;
@@ -114,20 +115,20 @@ const SCList = styled.div`
     animation: stretch 1s ease-out 0s alternate infinite none running;
   }
   @media (max-width: 768px) {
-    .gral-div{
-    padding: 10px;
-    margin-left: unset;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+    .gral-div {
+      padding: 10px;
+      margin-left: unset;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
     }
     .inputs-div {
       display: flex;
       flex-direction: column;
     }
-    .list-div{
+    .list-div {
       width: 100%;
     }
   }

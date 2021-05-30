@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export default function Search({ setSearch, search }) {
   return (
-    <SCInput>
+    <SCInput data-test="component-search">
       <div>
         <input
           className="search-input"
