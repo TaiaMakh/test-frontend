@@ -1,7 +1,9 @@
 const theme = {
     color: {
-        primary: '#0D1B2A',
-        secondary: "#E0E1DD"
+        letter: '#233142',
+        primary: '#e3e3e3',
+        secondary: '#f95959',
+        tertiary: '#455d7a'
     },
     typographySizes: {
         s: {
