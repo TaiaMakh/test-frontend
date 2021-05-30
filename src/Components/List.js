@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Search from "./Search";
+import Text from "./Text";
 
 export default function List() {
   const [data, setData] = useState([]);
@@ -14,31 +15,30 @@ export default function List() {
       });
   }, []);
 
-  console.log(data);
-
   return (
     <div>
       <p>Name</p>
-      <Search setSearch={setSearchName} />
+      <Search setSearch={setSearchName} search={searchName} />
       <p>Age</p>
-      <Search setSearch={setSearchAge} />
+      <Search setSearch={setSearchAge} search={searchAge} />
       {data
-        .filter(
-          (personName) =>
-            Object.values(personName.name)
-              .join(" ")
-              .toLowerCase()
-              .includes(searchName)
-          //person.name.title.toLowerCase().includes(searchName)
+        .filter((personName) =>
+          Object.values(personName.name)
+            .join(" ")
+            .toLowerCase()
+            .includes(searchName.toLowerCase())
         )
-        //.filter((personAge) => personAge.dob.age == parseInt(searchAge))
-        .map((el) => {
+        .filter((personAge) =>
+          searchAge ? personAge.dob.age === parseInt(searchAge) : true
+        )
+        .map((person) => {
           return (
-            <div key={el.registered.date}>
-              <p>
-                {el.name.title} {el.name.first} {el.name.last}
-              </p>
-              <p>Age: {el.dob.age}</p>
+            <div key={person.registered.date}>
+              <Text color="primary" size="s">
+                {person.name.title} {person.name.first} {person.name.last}
+              </Text>
+              <Text>Age: {person.dob.age}</Text>
+              <img src={person.picture.medium} alt='profile-pic'/>
             </div>
           );
         })}
