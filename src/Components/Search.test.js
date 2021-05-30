@@ -20,8 +20,3 @@ test('renders no input when `search` or `setSearch` prop is false', () => {
     const component = findByTestAttr(wrapper, 'component-search');
     expect (component.text()).toBe(''); 
 })
-// test('renders input when `search` or `setSearch` props are true', () => {
-//     const wrapper = setup({ search: true, setSearch: true })
-//     const message = findByTestAttr(wrapper, 'coponent-search');
-//     expect(message.text().length).not.toBe(0)
-// })
