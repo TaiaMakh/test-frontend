@@ -20,7 +20,7 @@ export default function List() {
   }, []);
 
   return (
-    <SCList>
+    <SCList data-test="component-list">
       <div className="gral-div">
         <div className="inputs-div">
           <Text size="m"> Name: </Text>
@@ -43,7 +43,7 @@ export default function List() {
               .map((person) => {
                 return (
                   <div className="div-details" key={person.registered.date}>
-                    <div>
+                    <div data-test="list-data">
                       <Text size="m">
                         {person.name.title} {person.name.first}{" "}
                         {person.name.last}
