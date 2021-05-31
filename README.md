@@ -26,7 +26,7 @@ npm test or run test
 
 
 * Github: [@TaiaMakh](https://github.com/TaiaMakh)
-* LinkedIn: [@Taia Makhmutova](https://linkedin.com/in/Taia Makhmutova)
+* LinkedIn: [@Taia Makhmutova](https://www.linkedin.com/in/taisiamakhmutova/)
 
 ## Show your support
 
