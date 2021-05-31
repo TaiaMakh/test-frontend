@@ -1,10 +1,7 @@
-import Enzyme, { shallow } from 'enzyme';
-import EnzymeAdapter from '@wojtekmaj/enzyme-adapter-react-17';
-import Search from '../Components/Search';
+import { shallow } from 'enzyme';
 import { findByTestAttr } from './Test.utils';
+import Search from '../Components/Search';
 
-
-Enzyme.configure({ adapter: new EnzymeAdapter() })
 
 const setup = (props={}) => {
     return shallow(<Search {...props}/>)

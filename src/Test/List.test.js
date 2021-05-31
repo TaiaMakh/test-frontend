@@ -1,9 +1,6 @@
-import Enzyme, { shallow } from "enzyme";
-import EnzymeAdapter from "@wojtekmaj/enzyme-adapter-react-17";
-import List from "../Components/List";
+import { shallow } from "enzyme";
 import { findByTestAttr } from "./Test.utils";
-
-Enzyme.configure({ adapter: new EnzymeAdapter() });
+import List from "../Components/List";
 
 const setup = () => shallow(<List />);
 

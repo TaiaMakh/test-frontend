@@ -132,13 +132,4 @@ const SCList = styled.div`
       width: 100%;
     }
   }
-  /* @media (max-width: 1090px){
-    .list-div{
-      width: 100%;
-    }
-    .inputs-div {
-      display: flex;
-      flex-direction: column;
-
-  } */
 `;
